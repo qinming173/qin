@@ -1,0 +1,46 @@
+@use '@/styles/variables.scss' as *;
+
+.ring {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.track {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: $radius-round;
+}
+
+.fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: $radius-round;
+  transition: background $transition-base;
+}
+
+.hole {
+  position: relative;
+  z-index: 2;
+  border-radius: $radius-round;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.centerTop {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+  color: $color-text-primary;
+  line-height: $line-height-tight;
+}
+
+.centerBottom {
+  margin-top: $spacing-xs;
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+}

@@ -1,0 +1,44 @@
+@use '@/styles/variables.scss' as *;
+
+.card {
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-card;
+  padding: $spacing-lg;
+  margin-bottom: $spacing-md;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: $spacing-md;
+}
+
+.titleWrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.icon {
+  font-size: $font-size-lg;
+  margin-right: $spacing-xs;
+}
+
+.title {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+}
+
+.extra {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.body {
+  width: 100%;
+}

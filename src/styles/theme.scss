@@ -1,0 +1,42 @@
+// ============================================
+// 主题配色变量（农田浇水助手）
+// ============================================
+
+// 品牌主题色：生态绿
+$color-primary: #2f9e44;
+$color-primary-light: #58d06f;
+$color-primary-dark: #237032;
+$color-primary-bg: #e6f6ea;
+
+// 水滴蓝（用水/降雨辅助色）
+$color-water: #1c7ed6;
+$color-water-light: #4dabf7;
+$color-water-bg: #e3f1fd;
+
+// 功能色
+$color-success: #00b42a;
+$color-warning: #ff7d00;
+$color-error: #f53f3f;
+$color-info: #1c7ed6;
+
+// 浇水状态色
+$status-good: #2f9e44;      // 适合浇水
+$status-none: #1c7ed6;      // 暂不需要
+$status-light: #f59f00;     // 少量补水
+$status-over: #e03131;      // 用水偏多
+
+// 背景色
+$color-bg-page: #f3f7f0;
+$color-bg-card: #ffffff;
+$color-bg-hover: #eef2ea;
+
+// 文本色
+$color-text-primary: #1d2129;
+$color-text-secondary: #4e5969;
+$color-text-tertiary: #86909c;
+$color-text-disabled: #c9cdd4;
+$color-text-white: #ffffff;
+
+// 边框色
+$color-border: #e5e8e1;
+$color-divider: #f0f2ec;

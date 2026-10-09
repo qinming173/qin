@@ -1,0 +1,187 @@
+@use '@/styles/variables.scss' as *;
+
+.page {
+  min-height: 100vh;
+  background: $color-bg-page;
+  padding: $spacing-md $page-padding $spacing-xl;
+}
+
+.formCard {
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-card;
+  padding: $spacing-lg;
+  margin-bottom: $spacing-md;
+}
+
+.field {
+  margin-bottom: $spacing-lg;
+}
+
+.label {
+  display: block;
+  font-size: $font-size-md;
+  font-weight: $font-weight-medium;
+  color: $color-text-primary;
+  margin-bottom: $spacing-sm;
+}
+
+.required {
+  color: $color-error;
+  margin-left: 4rpx;
+}
+
+.inputWrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: $color-bg-page;
+  border-radius: $radius-md;
+  padding: 0 $spacing-md;
+  height: 88rpx;
+}
+
+.input {
+  flex: 1;
+  font-size: $font-size-md;
+  color: $color-text-primary;
+}
+
+.unit {
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+  margin-left: $spacing-xs;
+}
+
+/* 地块选择 chips */
+.chips {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.chip {
+  padding: $spacing-xs $spacing-md;
+  border-radius: $radius-button;
+  background: $color-bg-page;
+  border: 2rpx solid $color-border;
+  margin: 0 $spacing-sm $spacing-sm 0;
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+  transition: all $transition-fast;
+}
+
+.chipActive {
+  background: $color-primary-bg;
+  border-color: $color-primary;
+  color: $color-primary;
+  font-weight: $font-weight-medium;
+}
+
+/* 时间快捷 */
+.timeRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.timeValue {
+  font-size: $font-size-md;
+  color: $color-text-primary;
+}
+
+/* 快捷水量 */
+.quickRow {
+  display: flex;
+  flex-direction: row;
+  margin-top: $spacing-sm;
+}
+
+.quickBtn {
+  padding: 8rpx $spacing-md;
+  border-radius: $radius-button;
+  background: $color-water-bg;
+  color: $color-water;
+  font-size: $font-size-sm;
+  margin-right: $spacing-sm;
+  transition: all $transition-fast;
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+/* 照片 */
+.photoWrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.photoAdd {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: $radius-md;
+  border: 2rpx dashed $color-border;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: $color-bg-page;
+}
+
+.photoAddIcon {
+  font-size: 48rpx;
+}
+
+.photoAddText {
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+  margin-top: 4rpx;
+}
+
+.photoItem {
+  position: relative;
+  width: 160rpx;
+  height: 160rpx;
+  margin-right: $spacing-sm;
+  border-radius: $radius-md;
+  overflow: hidden;
+}
+
+.photoImg {
+  width: 100%;
+  height: 100%;
+}
+
+.photoDel {
+  position: absolute;
+  top: 4rpx;
+  right: 4rpx;
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: $radius-round;
+  background: rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  font-size: $font-size-sm;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submitBtn {
+  @include button-reset;
+  width: 100%;
+  height: $button-height-lg;
+  border-radius: $radius-button;
+  background: linear-gradient(135deg, $color-primary 0%, $color-primary-light 100%);
+  color: #ffffff;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  margin-top: $spacing-md;
+  box-shadow: 0 6rpx 16rpx rgba(47, 158, 68, 0.3);
+  transition: all $transition-fast;
+  &:active {
+    opacity: 0.92;
+    transform: scale(0.98);
+  }
+}

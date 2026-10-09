@@ -1,0 +1,155 @@
+@use '@/styles/variables.scss' as *;
+
+.page {
+  min-height: 100vh;
+  background: $color-bg-page;
+  padding: $spacing-md $page-padding $spacing-xl;
+}
+
+.filterRow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: $spacing-md;
+}
+
+.chip {
+  padding: $spacing-xs $spacing-md;
+  border-radius: $radius-button;
+  background: $color-bg-card;
+  border: 2rpx solid $color-border;
+  margin: 0 $spacing-sm $spacing-sm 0;
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+}
+
+.chipActive {
+  background: $color-primary-bg;
+  border-color: $color-primary;
+  color: $color-primary;
+  font-weight: $font-weight-medium;
+}
+
+.summaryBar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: $color-bg-card;
+  border-radius: $radius-md;
+  padding: $spacing-md;
+  margin-bottom: $spacing-md;
+  box-shadow: $shadow-card;
+}
+
+.summaryText {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+}
+
+.summaryStrong {
+  font-weight: $font-weight-bold;
+  color: $color-water;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: $color-bg-card;
+  border-radius: $radius-md;
+  box-shadow: $shadow-card;
+  padding: $spacing-md;
+  margin-bottom: $spacing-sm;
+}
+
+.itemPhoto {
+  width: 96rpx;
+  height: 96rpx;
+  border-radius: $radius-sm;
+  margin-right: $spacing-md;
+  flex-shrink: 0;
+}
+
+.itemIcon {
+  width: 96rpx;
+  height: 96rpx;
+  border-radius: $radius-sm;
+  margin-right: $spacing-md;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 44rpx;
+  background: $color-water-bg;
+}
+
+.itemBody {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.itemTop {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.itemPlot {
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+  @include text-ellipsis;
+  max-width: 340rpx;
+}
+
+.itemAmount {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+  color: $color-water;
+}
+
+.itemMeta {
+  margin-top: 6rpx;
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+}
+
+.itemTags {
+  display: flex;
+  flex-direction: row;
+  margin-top: $spacing-xs;
+}
+
+.tag {
+  font-size: 20rpx;
+  color: $color-text-secondary;
+  background: $color-bg-page;
+  border-radius: $radius-xs;
+  padding: 2rpx 12rpx;
+  margin-right: $spacing-xs;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 120rpx 0;
+}
+
+.emptyIcon {
+  font-size: 96rpx;
+  margin-bottom: $spacing-md;
+}
+
+.emptyText {
+  font-size: $font-size-md;
+  color: $color-text-tertiary;
+}

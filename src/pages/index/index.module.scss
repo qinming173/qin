@@ -1,0 +1,345 @@
+@use '@/styles/variables.scss' as *;
+
+.page {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #e8f5ec 0%, $color-bg-page 420rpx);
+  padding-bottom: $spacing-xl;
+}
+
+/* ===== 顶部地块信息栏 ===== */
+.plotBar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: $spacing-md $page-padding $spacing-sm;
+}
+
+.arrow {
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: $radius-round;
+  background: rgba(255, 255, 255, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: $font-size-lg;
+  color: $color-primary;
+  transition: all $transition-fast;
+  &:active {
+    opacity: 0.6;
+    transform: scale(0.94);
+  }
+}
+
+.plotCenter {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.plotName {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+  color: $color-text-primary;
+}
+
+.plotMeta {
+  margin-top: 4rpx;
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+}
+
+.dots {
+  display: flex;
+  flex-direction: row;
+  margin-top: $spacing-xs;
+}
+
+.dot {
+  width: 10rpx;
+  height: 10rpx;
+  border-radius: $radius-round;
+  background: $color-border;
+  margin: 0 4rpx;
+}
+
+.dotActive {
+  width: 22rpx;
+  background: $color-primary;
+}
+
+/* ===== 天气条 ===== */
+.weatherBar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-xs $page-padding $spacing-md;
+}
+
+.weatherItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 $spacing-sm;
+}
+
+.weatherEmoji {
+  font-size: $font-size-xl;
+  margin-right: 6rpx;
+}
+
+.weatherText {
+  font-size: $font-size-md;
+  color: $color-text-secondary;
+}
+
+.weatherStrong {
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+}
+
+/* ===== 内容容器 ===== */
+.content {
+  padding: 0 $page-padding;
+}
+
+/* ===== 今日浇水结论大卡 ===== */
+.adviceCard {
+  border-radius: $radius-xl;
+  padding: $spacing-lg;
+  margin-bottom: $spacing-md;
+  box-shadow: $shadow-card-hover;
+  position: relative;
+  overflow: hidden;
+}
+
+.adviceTop {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.adviceLabel {
+  font-size: $font-size-sm;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.adviceEmoji {
+  font-size: 72rpx;
+}
+
+.adviceTitle {
+  display: block;
+  font-size: 52rpx;
+  font-weight: $font-weight-bold;
+  color: #ffffff;
+  margin: $spacing-xs 0 $spacing-sm;
+  line-height: $line-height-tight;
+}
+
+.adviceReason {
+  display: block;
+  font-size: $font-size-md;
+  color: rgba(255, 255, 255, 0.95);
+  line-height: $line-height-normal;
+}
+
+.adviceSug {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-top: $spacing-md;
+  padding: $spacing-sm $spacing-md;
+  background: rgba(255, 255, 255, 0.22);
+  border-radius: $radius-md;
+}
+
+.adviceSugIcon {
+  font-size: $font-size-lg;
+  margin-right: $spacing-xs;
+}
+
+.adviceSugText {
+  flex: 1;
+  font-size: $font-size-sm;
+  color: #ffffff;
+  line-height: $line-height-normal;
+}
+
+/* ===== 用水情况 ===== */
+.usageRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.ringWrap {
+  margin-right: $spacing-lg;
+}
+
+.usageStats {
+  flex: 1;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  margin-bottom: $spacing-sm;
+}
+
+.statLabel {
+  width: 140rpx;
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+}
+
+.statValue {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+}
+
+.statUnit {
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+  margin-left: 4rpx;
+}
+
+/* ===== 记录按钮 ===== */
+.recordBtn {
+  @include button-reset;
+  width: 100%;
+  height: $button-height-lg;
+  border-radius: $radius-button;
+  background: linear-gradient(135deg, $color-primary 0%, $color-primary-light 100%);
+  color: #ffffff;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  margin-top: $spacing-sm;
+  box-shadow: 0 6rpx 16rpx rgba(47, 158, 68, 0.3);
+  transition: all $transition-fast;
+  &:active {
+    opacity: 0.92;
+    transform: scale(0.98);
+  }
+}
+
+.recordBtnIcon {
+  font-size: $font-size-xl;
+  margin-right: $spacing-xs;
+}
+
+/* ===== 状态网格 ===== */
+.statusGrid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.statusCell {
+  width: 48%;
+  background: $color-bg-page;
+  border-radius: $radius-md;
+  padding: $spacing-md;
+  margin-bottom: $spacing-sm;
+  display: flex;
+  flex-direction: column;
+}
+
+.statusCellIcon {
+  font-size: 40rpx;
+  margin-bottom: $spacing-xs;
+}
+
+.statusCellLabel {
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+}
+
+.statusCellValue {
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+  margin-top: 4rpx;
+}
+
+/* ===== 趋势缩略 ===== */
+.trendLink {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.trendLinkText {
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+}
+
+.trendArrow {
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+  margin-left: 4rpx;
+}
+
+/* ===== 功能宫格 ===== */
+.funcGrid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.funcItem {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: $spacing-sm 0;
+  transition: all $transition-fast;
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.funcIcon {
+  width: 88rpx;
+  height: 88rpx;
+  border-radius: $radius-md;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 44rpx;
+  margin-bottom: $spacing-xs;
+}
+
+.funcText {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+}
+
+/* ===== 异常提示条 ===== */
+.alertBar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #fdecec;
+  border-radius: $radius-md;
+  padding: $spacing-sm $spacing-md;
+  margin-bottom: $spacing-md;
+}
+
+.alertIcon {
+  font-size: $font-size-lg;
+  margin-right: $spacing-xs;
+}
+
+.alertText {
+  flex: 1;
+  font-size: $font-size-sm;
+  color: $color-error;
+}
