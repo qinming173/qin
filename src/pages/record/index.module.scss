@@ -1,0 +1,221 @@
+@use '@/styles/variables.scss' as *;
+
+.page {
+  min-height: 100vh;
+  background: $color-bg-page;
+  padding-bottom: 160rpx;
+}
+
+/* 顶部地块切换 */
+.plotBar {
+  background: linear-gradient(135deg, $color-primary 0%, $color-primary-light 100%);
+  padding: $spacing-md $page-padding $spacing-lg;
+}
+
+.plotSwitch {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.arrowBtn {
+  width: 56rpx;
+  height: 56rpx;
+  border-radius: $radius-round;
+  background: rgba(255, 255, 255, 0.25);
+  @include flex-center;
+  flex-shrink: 0;
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.arrow {
+  font-size: $font-size-xl;
+  color: $color-text-white;
+  font-weight: $font-weight-bold;
+}
+
+.plotName {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-semibold;
+  color: $color-text-white;
+}
+
+.plotMeta {
+  font-size: $font-size-sm;
+  color: rgba(255, 255, 255, 0.85);
+  margin-top: $spacing-xs;
+  display: block;
+}
+
+/* 汇总条 */
+.summary {
+  display: flex;
+  flex-direction: row;
+  margin: -$spacing-md $page-padding 0;
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-card;
+  padding: $spacing-md 0;
+}
+
+.summaryItem {
+  flex: 1;
+  @include flex-center;
+  flex-direction: column;
+}
+
+.summaryValue {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+  color: $color-text-primary;
+}
+
+.summaryLabel {
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+  margin-top: 4rpx;
+}
+
+/* 列表 */
+.listTitle {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+  padding: $spacing-lg $page-padding $spacing-sm;
+  display: block;
+}
+
+.empty {
+  @include flex-center;
+  flex-direction: column;
+  padding: 120rpx 0;
+}
+
+.emptyIcon {
+  font-size: 96rpx;
+  margin-bottom: $spacing-md;
+}
+
+.emptyText {
+  font-size: $font-size-md;
+  color: $color-text-tertiary;
+}
+
+.recordCard {
+  margin: 0 $page-padding $spacing-md;
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  padding: $spacing-md $spacing-lg;
+  box-shadow: $shadow-card;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.recordDate {
+  width: 96rpx;
+  flex-shrink: 0;
+  @include flex-center;
+  flex-direction: column;
+  border-right: 2rpx solid $color-divider;
+  margin-right: $spacing-md;
+}
+
+.recordDay {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+  color: $color-primary;
+}
+
+.recordMonth {
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+}
+
+.recordBody {
+  flex: 1;
+  min-width: 0;
+}
+
+.recordTop {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.recordAmount {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+  color: $color-water;
+}
+
+.recordTime {
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+}
+
+.recordTags {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: $spacing-xs;
+  flex-wrap: wrap;
+  gap: $spacing-xs;
+}
+
+.tag {
+  font-size: $font-size-xs;
+  color: $color-text-secondary;
+  background: $color-bg-hover;
+  border-radius: $radius-xs;
+  padding: 2rpx 12rpx;
+}
+
+.tagSource {
+  color: $color-primary;
+  background: rgba(28, 163, 94, 0.1);
+}
+
+.recordPhoto {
+  width: 88rpx;
+  height: 88rpx;
+  border-radius: $radius-sm;
+  flex-shrink: 0;
+  margin-left: $spacing-sm;
+}
+
+/* 底部添加按钮 */
+.addBtn {
+  position: fixed;
+  left: $page-padding;
+  right: $page-padding;
+  bottom: $spacing-md;
+  height: $button-height-lg;
+  border-radius: $radius-button;
+  background: linear-gradient(135deg, $color-primary 0%, $color-primary-light 100%);
+  @include flex-center;
+  flex-direction: row;
+  box-shadow: 0 6rpx 16rpx rgba(28, 163, 94, 0.3);
+
+  &:active {
+    opacity: 0.92;
+    transform: scale(0.98);
+  }
+}
+
+.addIcon {
+  font-size: $font-size-xl;
+  margin-right: $spacing-xs;
+  color: $color-text-white;
+}
+
+.addText {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-text-white;
+}

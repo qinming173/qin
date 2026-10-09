@@ -1,0 +1,150 @@
+@use '@/styles/variables.scss' as *;
+
+.page {
+  min-height: 100vh;
+  background: $color-bg-page;
+  padding: $spacing-md $page-padding $spacing-xl;
+}
+
+/* 筛选 */
+.filterBar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: $spacing-sm;
+  margin-bottom: $spacing-md;
+}
+
+.chip {
+  padding: 10rpx 28rpx;
+  border-radius: $radius-round;
+  background: $color-bg-card;
+  border: 2rpx solid $color-border;
+
+  &:active {
+    opacity: 0.85;
+  }
+}
+
+.chipActive {
+  background: rgba(28, 163, 94, 0.1);
+  border-color: $color-primary;
+}
+
+.chipText {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+}
+
+.chipTextActive {
+  color: $color-primary;
+  font-weight: $font-weight-semibold;
+}
+
+/* 汇总 */
+.sumCard {
+  background: linear-gradient(135deg, #1677ff 0%, #69b1ff 100%);
+  border-radius: $radius-lg;
+  padding: $spacing-lg;
+  margin-bottom: $spacing-md;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.sumItem {
+  @include flex-center;
+  flex-direction: column;
+}
+
+.sumValue {
+  font-size: $font-size-xxl;
+  font-weight: $font-weight-bold;
+  color: $color-text-white;
+}
+
+.sumLabel {
+  font-size: $font-size-xs;
+  color: rgba(255, 255, 255, 0.85);
+  margin-top: 4rpx;
+}
+
+/* 分组列表 */
+.groupTitle {
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+  color: $color-text-secondary;
+  margin: $spacing-md 0 $spacing-sm;
+  display: block;
+}
+
+.row {
+  background: $color-bg-card;
+  border-radius: $radius-md;
+  padding: $spacing-md $spacing-lg;
+  margin-bottom: $spacing-sm;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-shadow: $shadow-card;
+}
+
+.rowDate {
+  width: 120rpx;
+  flex-shrink: 0;
+}
+
+.rowDay {
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+  display: block;
+}
+
+.rowTime {
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+}
+
+.rowBody {
+  flex: 1;
+  min-width: 0;
+}
+
+.rowPlot {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+  display: block;
+  @include text-ellipsis;
+}
+
+.rowMeta {
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+  margin-top: 4rpx;
+  display: block;
+}
+
+.rowAmount {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+  color: $color-water;
+  flex-shrink: 0;
+}
+
+.empty {
+  @include flex-center;
+  flex-direction: column;
+  padding: 120rpx 0;
+}
+
+.emptyIcon {
+  font-size: 96rpx;
+  margin-bottom: $spacing-md;
+}
+
+.emptyText {
+  font-size: $font-size-md;
+  color: $color-text-tertiary;
+}

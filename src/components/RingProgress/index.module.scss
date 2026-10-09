@@ -1,0 +1,27 @@
+@use '@/styles/variables.scss' as *;
+
+.wrap {
+  border-radius: $radius-round;
+  @include flex-center;
+  flex-shrink: 0;
+}
+
+.inner {
+  border-radius: $radius-round;
+  background: $color-bg-card;
+  @include flex-center;
+  flex-direction: column;
+}
+
+.top {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+  color: $color-text-primary;
+  line-height: $line-height-tight;
+}
+
+.bottom {
+  margin-top: $spacing-xs;
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+}

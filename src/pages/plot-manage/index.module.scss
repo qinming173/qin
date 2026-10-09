@@ -1,0 +1,121 @@
+@use '@/styles/variables.scss' as *;
+
+.page {
+  min-height: 100vh;
+  background: $color-bg-page;
+  padding: $spacing-md $page-padding 180rpx;
+}
+
+.plotCard {
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-card;
+  overflow: hidden;
+  margin-bottom: $spacing-md;
+}
+
+.plotCover {
+  width: 100%;
+  height: 240rpx;
+  display: block;
+}
+
+.plotBody {
+  padding: $spacing-md $spacing-lg;
+}
+
+.plotHead {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: $spacing-sm;
+}
+
+.plotName {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+}
+
+.plotBadge {
+  font-size: $font-size-xs;
+  color: $color-primary;
+  background: rgba(28, 163, 94, 0.1);
+  padding: 4rpx 16rpx;
+  border-radius: $radius-round;
+}
+
+.plotInfo {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+  display: block;
+  margin-bottom: 4rpx;
+}
+
+.plotActions {
+  display: flex;
+  flex-direction: row;
+  gap: $spacing-sm;
+  margin-top: $spacing-md;
+}
+
+.actionBtn {
+  flex: 1;
+  height: $button-height-sm;
+  border-radius: $radius-button;
+  @include flex-center;
+  border: 2rpx solid $color-border;
+  background: $color-bg-card;
+
+  &:active {
+    opacity: 0.85;
+  }
+}
+
+.actionBtnPrimary {
+  background: rgba(28, 163, 94, 0.1);
+  border-color: $color-primary;
+}
+
+.actionBtnDanger {
+  background: rgba(245, 63, 63, 0.06);
+  border-color: rgba(245, 63, 63, 0.3);
+}
+
+.actionText {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+}
+
+.actionTextPrimary {
+  color: $color-primary;
+  font-weight: $font-weight-medium;
+}
+
+.actionTextDanger {
+  color: $color-error;
+}
+
+.addBtn {
+  position: fixed;
+  left: $page-padding;
+  right: $page-padding;
+  bottom: $spacing-md;
+  height: $button-height-lg;
+  border-radius: $radius-button;
+  background: linear-gradient(135deg, $color-primary 0%, $color-primary-light 100%);
+  @include flex-center;
+  box-shadow: 0 6rpx 16rpx rgba(28, 163, 94, 0.3);
+
+  &:active {
+    opacity: 0.92;
+    transform: scale(0.98);
+  }
+}
+
+.addText {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-text-white;
+}

@@ -1,0 +1,14 @@
+{
+  "schema": "snapshot-summary/v1",
+  "label": "B",
+  "environment_fingerprint": "0ba295f9249349b7700e2c8fdb9d40478021250788704b7c8905cdd1326f56c1",
+  "environment_snapshot": "../environment/env-snapshot.json",
+  "artifact_hash": "e8b7cd615d5e43fda55a290dc8b4b338f4843dbc75129210b3b2507c179cc83e",
+  "artifact_manifest": "artifact-manifest.json",
+  "artifact_archive": "artifact-B.zip",
+  "branch": "run-b",
+  "base_branch": "main",
+  "base_commit": "a2fe8710a78bd573a428172c5198d2db8399dca6",
+  "environment_blob": "ef09a4c43ecbf5e54fc98a33005c9ea571f00e89",
+  "repo": "qinming173/qin"
+}
